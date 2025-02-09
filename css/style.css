@@ -2,6 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+  overflow: hidden;
 }
 
 :root{
@@ -18,6 +19,9 @@ body{
   background-image: url(../assets/mountains-universe-1.png);
   background-repeat: no-repeat;
   background-size: cover;
+
+  display: flex;
+  flex-direction: column;
 }
 
 a{
@@ -27,11 +31,84 @@ a{
   opacity: 0.6;
 }
 
+a:hover{
+  opacity: 1;
+}
+
+a.active{
+  opacity: 1;
+}
+
 nav{
   display: flex;
   gap: 3.2rem;
 
-  padding: 4rem;
+  padding: 4rem 0 0 4rem;
 
   align-items: center;
+}
+
+h1{
+  font-size: 5rem;
+  color: var(--white-color);
+}
+
+p{
+  font-size: 1.8rem;
+  color: var(--white-color);
+
+  line-height: 160%;
+}
+
+button{
+  width: 19rem;
+  height: 4.8rem;
+
+  border: 2px solid var(--white-color);
+  border-radius: 0.5rem;
+
+  color: var(--white-color);
+  background: none;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover{
+  background: var(--white-color);
+  color: var(--dark-cian-color);
+}
+
+#app{
+  height: 100vh;
+  flex: 1;
+}
+
+#home-content, #error-404{
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 2.4rem;
+}
+
+#universe-content, #exploration-content{
+  max-width: 70rem;
+  height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.6rem;
+  margin: 0 10rem;
+
+  justify-content: center;
 }
